@@ -14,7 +14,7 @@ class PetContainer extends React.Component {
 	}
 
 	updaetStateFromCallback(keyValuePair) {
-		this.setState(keyValuePair)
+		this.setState(keyValuePair);
 	}
 
 	setSaveStatus(status) {
@@ -25,15 +25,15 @@ class PetContainer extends React.Component {
 		return (
 			<div>
 				<Banner saved={this.state.saved}/>
-				<form onSubmit={e => { e.preventDefault() }}>
-					<PetName callback={(name) => { this.updaetStateFromCallback(name) }} />
-					<PetBreed name={this.state.name} callback={(breed) => { this.updaetStateFromCallback(breed) }} />
-					<PetGender name={this.state.name} breed={this.state.breed} callback={(gender) => { this.updaetStateFromCallback(gender) }} />
-					<PetSpay name={this.state.name} gender={this.state.gender} callback={(spay) => { this.updaetStateFromCallback(spay) }} />
+				<form onSubmit={e => { e.preventDefault(); }}>
+					<PetName callback={(name) => { this.updaetStateFromCallback(name); }} />
+					<PetBreed name={this.state.name} callback={(breed) => { this.updaetStateFromCallback(breed); }} />
+					<PetGender name={this.state.name} breed={this.state.breed} callback={(gender) => { this.updaetStateFromCallback(gender); }} />
+					<PetSpay name={this.state.name} gender={this.state.gender} callback={(spay) => { this.updaetStateFromCallback(spay); }} />
 					<SaveButton data={this.state} callback={(saved) => this.setSaveStatus(saved)} />
 				</form>
 			</div>
-		)
+		);
 	}
 }
 
