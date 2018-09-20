@@ -1,0 +1,11 @@
+node_modules
+dist/bundle.js
+dist/bundle.js.map
+.DS_Store
+npm-debug.log
+npm-debug.log**
+package-lock.json
+.vscode
+.env
+.env-int
+.env*
